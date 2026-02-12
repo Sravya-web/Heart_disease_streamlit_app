@@ -4,7 +4,7 @@ import joblib
 
 import joblib
 
-data = joblib.load("lr_model.pkl")
+data = joblib.load("model/lr_model.pkl")
 model = data["model"]
 features = data["columns"]
 
