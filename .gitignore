@@ -1,0 +1,27 @@
+# Virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Model files (large binaries)
+*.pkl
+*.joblib
+
+# Environment variables / secrets
+.env
+
+# OS / editor junk
+.DS_Store
+.vscode/
+
+# Streamlit cache
+.streamlit/
+
+# Logs
+*.log
+
+# Jupyter notebook checkpoints (if any)
+.ipynb_checkpoints/
