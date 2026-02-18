@@ -5,4 +5,4 @@ matplotlib
 seaborn
 joblib
 streamlit
-altair==4.2.2
+altair.vegalite.v4
