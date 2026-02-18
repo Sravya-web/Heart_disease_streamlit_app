@@ -2,9 +2,21 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-import joblib
+import os
 
-data = joblib.load("model/lr_model.pkl")
+# Get the absolute path of the current scripts
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# MODEL_PATH = os.path.join(BASE_DIR, "models","heart_dis_model.pkl")
+
+# # Load the model
+# data = joblib.load(MODEL_PATH)
+# model = data["model"]
+# columns = data["columns"]
+
+data = joblib.load("models/lr_model.pkl")
+# If lr_model.pkl is in the root project folder
+
+
 model = data["model"]
 features = data["columns"]
 
@@ -50,6 +62,9 @@ input_df = pd.DataFrame([input_data], columns=features)
 if st.button("Predict"):
     prob = model.predict_proba(input_df)[0][1]
     st.success(f" Heart Disease Risk: {prob * 100:.2f}%")
+
+import os
+print("Current working directory:", os.getcwd())
 
 
 

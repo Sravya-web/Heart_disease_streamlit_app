@@ -59,7 +59,7 @@ import os
 import joblib
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(BASE_DIR, "heart_disease_model.pkl")
+model_path = os.path.join(BASE_DIR, "models", "heart_disease_model.pkl")
 
 model = joblib.load(model_path)
 
@@ -80,6 +80,7 @@ joblib.dump({
     "columns": X.columns.tolist()
 }, "lr_model.pkl")
 
+print("✅ Model saved!")
 
 
 y_pred = model.predict(X_test)
